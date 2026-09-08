@@ -1,8 +1,12 @@
+import Navbar from "./components/NavBar.tsx";
 
 export default function Dashboard()
 {
   return(
-    <h1>Dashboard</h1>
+    <>
+      <Navbar />
+      <h1>Dashboard</h1>
+    </>
   );
 }
 
