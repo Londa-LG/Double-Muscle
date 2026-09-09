@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 
 export default function App() {
     return (
-      <MantineProvider defaultColorScheme="dark">
+      <MantineProvider>
         <BrowserRouter>
           <Routes>
             <Route index  element={<Dashboard />} />
