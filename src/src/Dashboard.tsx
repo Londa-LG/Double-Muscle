@@ -1,5 +1,6 @@
 import Navbar from "./components/NavBar.tsx";
-import { AppShell, Text } from '@mantine/core';
+import { Space, AppShell, Text } from '@mantine/core';
+import TodaysWorkout from "./components/TodaysWorkout.tsx";
 
 export default function Dashboard()
 {
@@ -9,7 +10,9 @@ export default function Dashboard()
         <Navbar />
       </AppShell.Header>
       <AppShell.Main>
-        <Text>Dashboard</Text>
+        <Text size="xl">Today's workout</Text>
+        <Space h="md" />
+        <TodaysWorkout />
       </AppShell.Main>
     </AppShell>
   );
