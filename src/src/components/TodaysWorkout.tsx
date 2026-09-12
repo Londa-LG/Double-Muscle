@@ -5,7 +5,7 @@ function TodaysWorkout()
 {
   return(
     <Paper withBorder shadow="xs" p="md">
-      <Badge variant="default" color="blue" size="lg" radius="md">
+      <Badge variant="default" color="blue" size="xl" radius="md">
         Tuesday, 22 September 2026
       </Badge>
       <Space h="xl" />
