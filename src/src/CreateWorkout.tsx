@@ -1,5 +1,6 @@
 import Navbar from "./components/NavBar.tsx";
 import { AppShell, Text } from '@mantine/core';
+import WorkoutForm from './components/WorkoutForm.tsx';
 
 export default function CreateWorkout()
 {
@@ -10,6 +11,7 @@ export default function CreateWorkout()
       </AppShell.Header>
       <AppShell.Main>
         <Text>Create Workout</Text>
+        <WorkoutForm />
       </AppShell.Main>
     </AppShell>
   );
