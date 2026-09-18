@@ -10,7 +10,6 @@ export default function CreateWorkout()
         <Navbar />
       </AppShell.Header>
       <AppShell.Main>
-        <Text>Create Workout</Text>
         <WorkoutForm />
       </AppShell.Main>
     </AppShell>
