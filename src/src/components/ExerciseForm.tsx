@@ -9,14 +9,14 @@ function ExerciseForm()
 
 
   return(
-    <Paper withBorder size="lg" p="md">
+    <Paper withBorder size="lg" p="md" mb="md">
       <Text fw={500} >Exercise:</Text>
       <Space h="sm" />
       <TextInput value={name} onChange={(event) => setName(event.currentTarget.value)} label="Name:" />
       <Space h="sm" />
-      <NumberInput value={sets} onChange={(event) => setSets(event.currentTarget.value)} label="Sets:" />
+      <NumberInput value={sets} onChange={setSets} label="Sets:" />
       <Space h="sm" />
-      <NumberInput value={reps} onChange={(event) => setReps(event.currentTarget.value)} label="Reps:" />
+      <NumberInput value={reps} onChange={setReps} label="Reps:" />
       <Space h="md" />
     </Paper>
   );
