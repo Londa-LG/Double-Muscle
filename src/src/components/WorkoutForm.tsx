@@ -27,11 +27,11 @@ function WorkoutForm()
       <Space h="md" />
       { forms }
       <Flex justify="center">
-      <Button onClick={addForm}>Add Exercise</Button>
+        <Button  onClick={addForm} color="yellow">Add Exercise</Button>
       </Flex>
       <Select label="Week day:" data={["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]} />
       <Space h="md" />
-      <Button fullWidth>Create</Button>
+      <Button color="yellow" fullWidth>Create</Button>
     </Paper>
   );
 }
