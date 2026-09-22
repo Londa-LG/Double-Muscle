@@ -1,7 +1,7 @@
 import Exercise  from './Exercise.tsx';
 import { useDisclosure } from '@mantine/hooks';
 import PerformExercise from './PerformExercise.tsx';
-import { Badge,Paper,Flex,Space } from '@mantine/core';
+import { Text,Button,Badge,Paper,Flex,Space } from '@mantine/core';
 
 function PerformWorkout()
 {
@@ -21,6 +21,12 @@ function PerformWorkout()
         <PerformExercise reps={5} />
         <PerformExercise reps={5} />
       </Flex>
+      <Space h="xl" />
+      <Button fullWidth color="yellow">
+        <Text size="md">
+          Done
+        </Text>
+      </Button>
     </Paper>
   );
 }

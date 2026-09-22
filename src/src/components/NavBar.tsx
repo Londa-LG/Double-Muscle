@@ -41,7 +41,7 @@ export default function Navbar(){
         <Group justify="center" gap="md">
           <Avatar />
           <Text>Taint Levin</Text>
-          <ActionIcon onClick={ toggleColorScheme } variant="default" size="lg" aria-label="light-mode">
+          <ActionIcon onClick={ toggleColorScheme } color="yellow" size="lg" aria-label="light-mode">
             { schemeBtn }
           </ActionIcon>
         </Group>
