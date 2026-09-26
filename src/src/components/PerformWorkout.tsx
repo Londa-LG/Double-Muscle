@@ -1,11 +1,10 @@
 import Exercise  from './Exercise.tsx';
 import { useDisclosure } from '@mantine/hooks';
 import PerformExercise from './PerformExercise.tsx';
-import { Text,Button,Badge,Paper,Flex,Space } from '@mantine/core';
+import { Text,ScrollArea,Button,Badge,Paper,Flex,Space } from '@mantine/core';
 
 function PerformWorkout()
 {
-  const [expanded, { toggle }] = useDisclosure(false);
   return(
     <Paper withBorder shadow="xs" p="md">
       <Flex align="center">
@@ -14,13 +13,25 @@ function PerformWorkout()
         </Badge>
       </Flex>
       <Space h="xl" />
-      <Flex gap="sm" align="flex-start" direction="column">
-        <PerformExercise reps={10} />
-        <PerformExercise reps={5} />
-        <PerformExercise reps={5} />
-        <PerformExercise reps={5} />
-        <PerformExercise reps={5} />
-      </Flex>
+        <ScrollArea w="100%" h="400">
+          <Flex gap="sm" align="flex-start" direction="column">
+            <PerformExercise reps={10} />
+            <PerformExercise reps={5} />
+            <PerformExercise reps={5} />
+            <PerformExercise reps={5} />
+            <PerformExercise reps={5} />
+            <PerformExercise reps={10} />
+            <PerformExercise reps={5} />
+            <PerformExercise reps={5} />
+            <PerformExercise reps={5} />
+            <PerformExercise reps={5} />
+            <PerformExercise reps={10} />
+            <PerformExercise reps={5} />
+            <PerformExercise reps={5} />
+            <PerformExercise reps={5} />
+            <PerformExercise reps={5} />
+          </Flex>
+        </ScrollArea>
       <Space h="xl" />
       <Button fullWidth color="yellow">
         <Text size="md">
