@@ -1,11 +1,20 @@
 import { Paper } from '@mantine/core';
 
-function ProgressDay()
+function ProgressDay(props: {trained:bool})
 {
-  return(
-    <Paper w="12%" withBorder bg="yellow" p="md">
-    </Paper>
-  );
+  if(props.trained)
+  {
+    return(
+      <Paper withBorder bg="yellow" p="md">
+      </Paper>
+    );
+  }
+  else{
+    return(
+      <Paper withBorder p="md">
+      </Paper>
+    );
+  }
 }
 
 export default ProgressDay;
