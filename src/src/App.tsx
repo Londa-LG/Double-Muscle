@@ -1,5 +1,6 @@
 import "./App.css"
 import "@mantine/core/styles.css";
+import '@mantine/charts/styles.css';
 import Workout from "./Workout.tsx";
 import Dashboard from "./Dashboard.tsx";
 import CreateWorkout from "./CreateWorkout.tsx";

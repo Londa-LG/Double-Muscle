@@ -1,14 +1,14 @@
 import { useDisclosure } from '@mantine/hooks';
 import { Text,Popover,Paper } from '@mantine/core';
 
-function ProgressDay(props: {trained:bool})
+function ConcistencyDay(props: {trained:boolean, details:string})
 {
   const [opened, { close, open }] = useDisclosure(false);
-  const day = '<Paper withBorder p="md"></Paper>';
+  let day = '<Paper withBorder p="md"></Paper>';
 
   if(props.trained)
   {
-    const day = '<Paper withBorder bg="yellow" p="md"></Paper>';
+    day = '<Paper withBorder bg="yellow" p="md"></Paper>';
   }
 
   return (
@@ -19,11 +19,11 @@ function ProgressDay(props: {trained:bool})
       </Popover.Target>
       <Popover.Dropdown style={{ pointerEvents: 'none' }}>
         <Text size="sm">
-          This popover is shown when user hovers the target element
+        { props.details }
         </Text>
       </Popover.Dropdown>
     </Popover>
   );
 }
 
-export default ProgressDay;
+export default ConcistencyDay;

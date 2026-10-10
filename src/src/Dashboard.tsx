@@ -3,6 +3,7 @@ import Calendar from "./components/WorkoutCalendar.tsx";
 import { Grid, Space, AppShell, Text } from '@mantine/core';
 import TodaysWorkout from "./components/TodaysWorkout.tsx";
 import PerformWorkout from "./components/PerformWorkout.tsx";
+import Concistency from './components/Concistency.tsx';
 import Progress from './components/Progress.tsx';
 
 export default function Dashboard()
@@ -14,6 +15,7 @@ export default function Dashboard()
       </AppShell.Header>
       <AppShell.Main>
         <Progress />
+        <Concistency />
       </AppShell.Main>
     </AppShell>
   );
