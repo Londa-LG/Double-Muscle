@@ -1,3 +1,4 @@
+import Timer from './components/Timer.tsx';
 import Navbar from "./components/NavBar.tsx";
 import { Grid,AppShell, Text } from '@mantine/core';
 import PresentWorkout from './components/PresentWorkout.tsx';
@@ -18,6 +19,7 @@ export default function Workout()
         <Navbar />
       </AppShell.Header>
       <AppShell.Main>
+        <Timer minutes={1} />
         <PresentWorkout workout="Upper day" exercises={exercises}/>
       </AppShell.Main>
     </AppShell>
