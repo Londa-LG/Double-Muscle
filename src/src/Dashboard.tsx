@@ -2,9 +2,9 @@ import Navbar from "./components/NavBar.tsx";
 import Calendar from "./components/WorkoutCalendar.tsx";
 import { Grid, Space, AppShell, Text } from '@mantine/core';
 import TodaysWorkout from "./components/TodaysWorkout.tsx";
-import PerformWorkout from "./components/PerformWorkout.tsx";
 import Concistency from './components/Concistency.tsx';
 import Progress from './components/Progress.tsx';
+import WorkoutCalendar from './components/WorkoutCalendar.tsx';
 
 export default function Dashboard()
 {
@@ -14,8 +14,13 @@ export default function Dashboard()
         <Navbar />
       </AppShell.Header>
       <AppShell.Main>
+        <TodaysWorkout />
+        <Space h="xl" />
         <Progress />
+        <Space h="xl" />
         <Concistency />
+        <Space h="xl" />
+        <WorkoutCalendar />
       </AppShell.Main>
     </AppShell>
   );

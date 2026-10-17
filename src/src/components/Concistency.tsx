@@ -1,20 +1,15 @@
-import { Badge,Text,Grid,Flex,Paper } from '@mantine/core';
+import { Space,Badge,Text,Grid,Flex,Paper } from '@mantine/core';
 import ConcistencyDay from './ConcistencyDay.tsx';
 
 function Concistency()
 {
   return(
-    <Paper withBorder p="md">
+    <Paper withBorder p="md" shadow="xs">
+      <Badge variant="default" color="blue" size="xl" radius="md">
+        Workout Concistency
+      </Badge>
+      <Space h="xl" />
       <Flex>
-        <Flex px="sm" gap="lg" justify="flex-start" direction="column">
-          <Text >Mon</Text>
-          <Text >Tue</Text>
-          <Text >Wed</Text>
-          <Text >Thur</Text>
-          <Text >Fri</Text>
-          <Text >Sat</Text>
-          <Text >Sun</Text>
-        </Flex>
         <Grid columns={16} gap="xs">
           {Array.from({ length: 16 * 7 }, (_, i) => (
             <Grid.Col key={i} span={1}>

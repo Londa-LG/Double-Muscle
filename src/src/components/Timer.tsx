@@ -22,8 +22,7 @@ function Timer(props: {minutes:number}) {
   const seconds = secondsLeft % 60;
 
   return (
-    <Paper withBorder shadow="xs" p="md">
-      <RingProgress size={220} thickness={13} roundCaps 
+    <RingProgress size={220} thickness={13} roundCaps 
         sections={[
           { value: {value}, color: 'cyan' }
         ]}
@@ -32,8 +31,7 @@ function Timer(props: {minutes:number}) {
             {minutes}:{String(seconds).padStart(2, "0")}
           </Text>
         }
-      />
-    </Paper>
+    />
   );
 }
 

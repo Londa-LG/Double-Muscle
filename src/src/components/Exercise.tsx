@@ -1,4 +1,4 @@
-import { Button,Group,ThemeIcon,Paper,Text,Flex } from '@mantine/core';
+import { Group,ThemeIcon,Paper,Text,Flex } from '@mantine/core';
 import { BarbellIcon } from '@phosphor-icons/react';
 
 function Exercise(props: { exercise: string, sets: number })
@@ -19,9 +19,6 @@ function Exercise(props: { exercise: string, sets: number })
           </Text>
         </Flex>
         </Group>
-        <Button varient="default" color="yellow">
-          Start workout
-        </Button>
       </Group>
     </Paper>
   );

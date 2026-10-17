@@ -1,4 +1,4 @@
-import { BarChart } from '@mantine/charts';
+import { LineChart } from '@mantine/charts';
 
 function ProgressReps() {
   const data = [
@@ -8,7 +8,7 @@ function ProgressReps() {
     {week:"23 Nov - 29 Nov",'Pike pushups':8,'Rows':9,Deadlifts:8,Squats:9,'Upright rows':9},
   ];
   return (
-    <BarChart
+    <LineChart
       h={300}
       data={data}
       dataKey="week"
@@ -19,7 +19,8 @@ function ProgressReps() {
         { name: 'Squats', color: 'yellow.6' },
         { name: 'Upright rows', color: 'orange.6' },
       ]}
-      tickLine="y"
+      curveType="bump"
+      connectNulls
     />
   );
 }

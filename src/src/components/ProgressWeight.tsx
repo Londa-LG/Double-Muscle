@@ -1,14 +1,14 @@
-import { BarChart } from '@mantine/charts';
+import { LineChart } from '@mantine/charts';
 
 function ProgressWeight() {
   const data = [
-    {week:"2 Nov - 8 Nov",'Pike pushups':6,'Rows':6,Deadlifts:6,Squats:6,'Upright rows':6},
-    {week:"9 Nov - 15 Nov",'Pike pushups':7,'Rows':7,Deadlifts:7,Squats:7,'Upright rows':7},
-    {week:"16 Nov - 22 Nov",'Pike pushups':8,'Rows':8,Deadlifts:7,Squats:8,'Upright rows':8},
-    {week:"23 Nov - 29 Nov",'Pike pushups':8,'Rows':9,Deadlifts:8,Squats:9,'Upright rows':9},
+    {week:"2 Nov - 8 Nov",'Pike pushups':10,'Rows':20,Deadlifts:6,Squats:6,'Upright rows':6},
+    {week:"9 Nov - 15 Nov",'Pike pushups':11,'Rows':21,Deadlifts:7,Squats:7,'Upright rows':7},
+    {week:"16 Nov - 22 Nov",'Pike pushups':12,'Rows':22,Deadlifts:7,Squats:8,'Upright rows':8},
+    {week:"23 Nov - 29 Nov",'Pike pushups':11,'Rows':22,Deadlifts:8,Squats:9,'Upright rows':9},
   ];
   return (
-      <BarChart
+      <LineChart
         h={300}
         data={data}
         dataKey="week"
@@ -19,7 +19,8 @@ function ProgressWeight() {
           { name: 'Squats', color: 'yellow.6' },
           { name: 'Upright rows', color: 'orange.6' },
         ]}
-        tickLine="y"
+        curveType="bump"
+        connectNulls
       />
   );
 }
