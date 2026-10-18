@@ -21,6 +21,7 @@ export default function Dashboard()
         <Concistency />
         <Space h="xl" />
         <WorkoutCalendar />
+        <Space h="xl" />
       </AppShell.Main>
     </AppShell>
   );

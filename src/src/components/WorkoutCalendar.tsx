@@ -1,109 +1,76 @@
-import { Text,Badge ,Grid,Paper,Flex,Space } from '@mantine/core';
+import { Text,Badge,Flex,Table,Paper,Space } from '@mantine/core';
 import CalendarDay from './CalendarDay';
 
 function WorkoutCalendar()
 {
   return(
-    <Paper withBorder p="lg">
+    <Paper withBorder p="md">
       <Badge variant="default" size="xl" radius="md">
-        September 2026
+        October 2026
       </Badge>
       <Space h="xl" />
-      <Grid>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={true} day={1} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={2} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={3} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={true} day={4} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={5} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={6} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={7} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={true} day={8} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={9} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={10} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={true} day={11} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={12} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={13} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={14} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={true} day={15} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={16} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={17} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={true} day={18} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={19} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={20} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={21} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={true} day={22} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={23} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={24} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={true} day={25} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={26} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={27} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={28} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={true} day={29} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={30} />
-        </Grid.Col>
-        <Grid.Col span={1.7}>
-          <CalendarDay workout={false} day={31} />
-        </Grid.Col>
-      </Grid>
+      <Flex justify="center">
+        <Table withRowBorders={false} tabularNums>
+          <Table.Thead>
+            <Table.Tr>
+              <Table.Th>Mon</Table.Th>
+              <Table.Th>Tue</Table.Th>
+              <Table.Th>Wed</Table.Th>
+              <Table.Th>Thu</Table.Th>
+              <Table.Th>Fri</Table.Th>
+              <Table.Th>Sat</Table.Th>
+              <Table.Th>Sun</Table.Th>
+            </Table.Tr>
+          </Table.Thead>
+          <Table.Tbody>
+            <Table.Tr key="week1">
+              <Table.Td></Table.Td>
+              <Table.Td></Table.Td>
+              <Table.Td></Table.Td>
+              <Table.Td><CalendarDay workout={true} day={1} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={2} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={3} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={4} /></Table.Td>
+            </Table.Tr>
+            <Table.Tr key="week2">
+              <Table.Td><CalendarDay workout={true} day={5} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={6} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={7} /></Table.Td>
+              <Table.Td><CalendarDay workout={true} day={8} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={9} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={10} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={11} /></Table.Td>
+            </Table.Tr>
+            <Table.Tr key="week3">
+              <Table.Td><CalendarDay workout={true} day={12} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={13} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={14} /></Table.Td>
+              <Table.Td><CalendarDay workout={true} day={15} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={16} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={17} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={18} /></Table.Td>
+            </Table.Tr>
+            <Table.Tr key="week4">
+              <Table.Td><CalendarDay workout={true} day={19} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={20} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={21} /></Table.Td>
+              <Table.Td><CalendarDay workout={true} day={22} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={23} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={24} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={25} /></Table.Td>
+            </Table.Tr>
+            <Table.Tr key="week5">
+              <Table.Td><CalendarDay workout={true} day={26} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={27} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={28} /></Table.Td>
+              <Table.Td><CalendarDay workout={true} day={29} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={30} /></Table.Td>
+              <Table.Td><CalendarDay workout={false} day={31} /></Table.Td>
+              <Table.Td></Table.Td>
+            </Table.Tr>
+          </Table.Tbody>
+        </Table>
+      </Flex>
     </Paper>
   );
 }

@@ -1,25 +1,35 @@
-import { Tooltip,Paper,Flex,Text } from '@mantine/core';
+import { BarbellIcon } from '@phosphor-icons/react';
+import { ThemeIcon,Tooltip,Paper,Flex,Text } from '@mantine/core';
 
 function CalendarDay(props:{ workout: bool, day: number })
 {
   if(props.workout){
     return(
       <Tooltip label="Workout day">
-        <Paper bg="yellow" withBorder p="md">
-          <Flex algin="center" justify="center">
-            <Text c="white" size="xl">{ props.day }</Text>
+        <Flex justify="flex-start">
+          <Flex justify="center" align="center" direction="column">
+            <Text>{props.day}</Text>
+            <Paper withBorder>
+              <Flex algin="center" justify="center">
+                <ThemeIcon color="yellow" size="xl">
+                  <BarbellIcon style={{ width: '70%', height: '70%' }} />
+                </ThemeIcon>
+              </Flex>
+            </Paper>
           </Flex>
-        </Paper>
+        </Flex>
       </Tooltip>
     );
   }
   return(
     <Tooltip label="Rest day">
-      <Paper withBorder p="md">
-        <Flex algin="center" justify="center">
-          <Text size="xl">{ props.day }</Text>
+      <Flex justify="flex-start">
+        <Flex align="center" direction="column">
+          <Text>{props.day}</Text>
+          <Paper withBorder p="lg">
+          </Paper>
         </Flex>
-      </Paper>
+      </Flex>
     </Tooltip>
   );
 }
