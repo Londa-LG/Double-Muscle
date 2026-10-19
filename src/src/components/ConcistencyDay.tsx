@@ -8,7 +8,18 @@ function ConcistencyDay(props: {trained:boolean, details:string})
 
   if(props.trained)
   {
-    day = '<Paper withBorder bg="yellow" p="md"></Paper>';
+    return (
+    <Popover width={200} position="bottom" withArrow shadow="md" opened={opened}>
+      <Popover.Target>
+        <Paper onMouseEnter={open} onMouseLeave={close} bg="yellow" p="md"></Paper>
+      </Popover.Target>
+      <Popover.Dropdown style={{ pointerEvents: 'none' }}>
+        <Text size="sm">
+        { props.details }
+        </Text>
+      </Popover.Dropdown>
+    </Popover>
+  );
   }
 
   return (

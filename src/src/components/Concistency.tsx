@@ -3,6 +3,23 @@ import ConcistencyDay from './ConcistencyDay.tsx';
 
 function Concistency()
 {
+  const records = [
+    { index: 1, trained: true, details: "Completed workout"},
+    { index: 2, trained: true, details: "Completed workout"},
+    { index: 3, trained: true, details: "Completed workout"},
+    { index: 4, trained: false, details: "Failed to complete workout"},
+    { index: 5, trained: true, details: "Completed workout"},
+    { index: 6, trained: true, details: "Completed workout"},
+  ];
+
+  const display_items = Array.from({length: 127}, (_,i) => i < records.length ? records[i] : { index : i, trained: false, details: "No record yet" });
+  
+  const maped_records = display_items.map((record) =>(
+    <Grid.Col key={record.index} span={1}>
+      <ConcistencyDay trained={record.trained} details={record.details} />
+    </Grid.Col>
+  ));
+
   return(
     <Paper withBorder p="md" shadow="xs">
       <Badge variant="default" color="blue" size="xl" radius="md">
@@ -10,12 +27,8 @@ function Concistency()
       </Badge>
       <Space h="xl" />
       <Flex>
-        <Grid columns={16} gap="xs">
-          {Array.from({ length: 16 * 7 }, (_, i) => (
-            <Grid.Col key={i} span={1}>
-              <ConcistencyDay trained={false} details={"Some details on the day"} />
-            </Grid.Col>
-          ))}
+        <Grid columns={16} gap="md">
+          { maped_records }
         </Grid>
       </Flex>
     </Paper>
