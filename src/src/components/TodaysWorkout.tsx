@@ -3,6 +3,17 @@ import Exercise  from './Exercise.tsx';
 
 function TodaysWorkout()
 {
+  const exercises = [
+    { exercise: "Pike pushups", sets: "5"},
+    { exercise: "Rows (half band)", sets: "5"},
+    { exercise: "Deadlifts (grey band)", sets: "5"},
+    { exercise: "Squat (half band)", sets: "5"},
+    { exercise: "Upright rows (half green)", sets: "5"},
+  ]
+
+  const workout = exercises.map((exercise) => (
+    <Exercise exercise={exercise.exercise} sets={exercise.sets} />
+  ));
   return(
     <Paper withBorder shadow="xs" p="md">
       <Badge variant="default" color="blue" size="xl" radius="md">
@@ -11,11 +22,7 @@ function TodaysWorkout()
       <Space h="xl" />
       <Scroller draggable>
         <Group gap="xs" wrap="nowrap">
-          <Exercise exercise="Pike pushups" sets="5" />
-          <Exercise exercise="Rows | Half band: grey" sets="5" />
-          <Exercise exercise="Deadlift | Full band: grey " sets="5" />
-          <Exercise exercise="Squat | Half band: blue" sets="5" />
-          <Exercise exercise="Uppright rows: Half band: green" sets="5" />
+          { workout }
         </Group>
       </Scroller>
       <Space h="lg" />
