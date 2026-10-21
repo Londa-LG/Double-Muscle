@@ -3,6 +3,88 @@ import CalendarDay from './CalendarDay';
 
 function WorkoutCalendar()
 {
+  const week1 = [
+    { workout: null, day: null },
+    { workout: null, day: null },
+    { workout: null, day: null },
+    { workout: true, day: 1 },
+    { workout: false, day: 2 },
+    { workout: false, day: 3 },
+    { workout: false, day: 4 },
+  ];
+  const week2 = [
+    { workout: true, day: 5 },
+    { workout: false, day: 6 },
+    { workout: false, day: 7 },
+    { workout: true, day: 8 },
+    { workout: false, day: 9 },
+    { workout: false, day: 10 },
+    { workout: false, day: 11 },
+  ];
+  const week3 = [
+    { workout: true, day: 12 },
+    { workout: false, day: 13 },
+    { workout: false, day: 14 },
+    { workout: true, day: 15 },
+    { workout: false, day: 16 },
+    { workout: false, day: 17 },
+    { workout: false, day: 18 },
+  ];
+  const week4 = [
+    { workout: true, day: 19 },
+    { workout: false, day: 20 },
+    { workout: false, day: 21 },
+    { workout: true, day: 22 },
+    { workout: false, day: 23 },
+    { workout: false, day: 24 },
+    { workout: false, day: 25 },
+  ];
+  const week5 = [
+    { workout: true, day: 26 },
+    { workout: false, day: 27 },
+    { workout: false, day: 28 },
+    { workout: true, day: 29 },
+    { workout: false, day: 30 },
+    { workout: false, day: 31 },
+    { workout: null, day: null },
+  ];
+
+  const week1_mapping = week1.map((week) => (
+    <Table.Td key={week.day}>
+      { week.workout != null && (
+        <CalendarDay workout={week.workout} day={week.day} />
+      )}
+    </Table.Td>
+  ));
+  const week2_mapping = week2.map((week) => (
+    <Table.Td key={week.day}>
+      { week.workout != null && (
+        <CalendarDay workout={week.workout} day={week.day} />
+      )}
+    </Table.Td>
+  ));
+  const week3_mapping = week3.map((week) => (
+    <Table.Td key={week.day}>
+      { week.workout != null && (
+        <CalendarDay workout={week.workout} day={week.day} />
+      )}
+    </Table.Td>
+  ));
+  const week4_mapping = week4.map((week) => (
+    <Table.Td key={week.day}>
+      { week.workout != null && (
+        <CalendarDay workout={week.workout} day={week.day} />
+      )}
+    </Table.Td>
+  ));
+  const week5_mapping = week4.map((week) => (
+    <Table.Td key={week.day}>
+      { week.workout != null && (
+        <CalendarDay workout={week.workout} day={week.day} />
+      )}
+    </Table.Td>
+  ));
+  
   return(
     <Paper withBorder p="md">
       <Badge variant="default" size="xl" radius="md">
@@ -24,49 +106,19 @@ function WorkoutCalendar()
           </Table.Thead>
           <Table.Tbody>
             <Table.Tr key="week1">
-              <Table.Td></Table.Td>
-              <Table.Td></Table.Td>
-              <Table.Td></Table.Td>
-              <Table.Td><CalendarDay workout={true} day={1} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={2} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={3} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={4} /></Table.Td>
+              { week1_mapping }
             </Table.Tr>
             <Table.Tr key="week2">
-              <Table.Td><CalendarDay workout={true} day={5} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={6} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={7} /></Table.Td>
-              <Table.Td><CalendarDay workout={true} day={8} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={9} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={10} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={11} /></Table.Td>
+              { week2_mapping }
             </Table.Tr>
             <Table.Tr key="week3">
-              <Table.Td><CalendarDay workout={true} day={12} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={13} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={14} /></Table.Td>
-              <Table.Td><CalendarDay workout={true} day={15} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={16} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={17} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={18} /></Table.Td>
+              { week3_mapping }
             </Table.Tr>
             <Table.Tr key="week4">
-              <Table.Td><CalendarDay workout={true} day={19} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={20} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={21} /></Table.Td>
-              <Table.Td><CalendarDay workout={true} day={22} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={23} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={24} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={25} /></Table.Td>
+              { week4_mapping }
             </Table.Tr>
             <Table.Tr key="week5">
-              <Table.Td><CalendarDay workout={true} day={26} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={27} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={28} /></Table.Td>
-              <Table.Td><CalendarDay workout={true} day={29} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={30} /></Table.Td>
-              <Table.Td><CalendarDay workout={false} day={31} /></Table.Td>
-              <Table.Td></Table.Td>
+              { week5_mapping }
             </Table.Tr>
           </Table.Tbody>
         </Table>
@@ -76,3 +128,4 @@ function WorkoutCalendar()
 }
 
 export default WorkoutCalendar;
+

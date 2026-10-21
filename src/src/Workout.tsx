@@ -19,7 +19,7 @@ export default function Workout()
         <Navbar />
       </AppShell.Header>
       <AppShell.Main>
-        <Timer minutes={1} />
+        <Timer minutes={10} />
         <PresentWorkout workout="Upper day" exercises={exercises}/>
       </AppShell.Main>
     </AppShell>
