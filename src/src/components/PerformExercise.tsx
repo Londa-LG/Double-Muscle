@@ -16,7 +16,6 @@ function ProgressExercise(props: { reps: number })
           </Text>
         </Flex>
         </Group>
-        <Checkbox varient="default" color="yellow" />
       </Group>
     </Paper>
   );
