@@ -1,0 +1,40 @@
+{
+  "workout_plan":[
+    {
+      "title": "Full body",
+      "complete": false,
+      "week_day": "Monday",
+      "exercises": [
+        { "exercise": "Pike pushups", "sets": [9,9,9,9,5]},
+        { "exercise": "Rows", "sets": [9,9,9,9,5]},
+        { "exercise": "Deadlift", "sets": [9,9,9,9,5]},
+        { "exercise": "Squat", "sets": [9,9,9,9,5]},
+        { "exercise": "Upright rows", "sets": [9,9,9,9,5]}
+      ]
+    },
+    {
+      "title": "Full body",
+      "complete": false,
+      "week_day": "Thursday",
+      "exercises": [
+        { "date": "2026-10-23" ,"exercise": "Pike pushups", "sets": [9,9,9,9,5]},
+        { "exercise": "Rows", "sets": [9,9,9,9,5]},
+        { "exercise": "Deadlift", "sets": [9,9,9,9,5]},
+        { "exercise": "Squat", "sets": [9,9,9,9,5]},
+        { "exercise": "Upright rows", "sets": [9,9,9,9,5]}
+      ]
+    }
+  ],
+  "completed_exercises":[
+    { "date": "2026-10-26" ,"exercise": "Pike pushups", "sets": [9,9,9,9,5]},
+    { "date": "2026-10-26" ,"exercise": "Rows", "sets": [9,9,9,9,5]},
+    { "date": "2026-10-26" ,"exercise": "Deadlift", "sets": [9,9,9,9,5]},
+    { "date": "2026-10-26" ,"exercise": "Squat", "sets": [9,9,9,9,5]},
+    { "date": "2026-10-26" ,"exercise": "Upright rows", "sets": [9,9,9,9,5]},
+    { "date": "2026-10-29" ,"exercise": "Pike pushups", "sets": [9,9,9,9,5]},
+    { "date": "2026-10-29" ,"exercise": "Rows", "sets": [9,9,9,9,5]},
+    { "date": "2026-10-29" ,"exercise": "Deadlift", "sets": [9,9,9,9,5]},
+    { "date": "2026-10-29" ,"exercise": "Squat", "sets": [9,9,9,9,5]},
+    { "date": "2026-10-29" ,"exercise": "Upright rows", "sets": [9,9,9,9,5]}
+  ]
+}

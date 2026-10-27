@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import Navbar from "./components/NavBar.tsx";
 import Dashboard from "./components/Dashboard.tsx";
-import { Center, Button, Flex, Grid, Space, AppShell, Text } from '@mantine/core';
+import { FileButton,Center, Button, Flex,  Space, AppShell, Text } from '@mantine/core';
 import { FilePlusIcon,UploadSimpleIcon } from "@phosphor-icons/react";
 
 export default function Home()
 {
   const [data,setData] = useState(null);
 
-  function Load()
+  function loadFile(file: File | null)
   {
     setData({});
   }
@@ -38,7 +38,9 @@ export default function Home()
             <Flex direction="column" align="center" justify="center">
               <Button leftSection={<FilePlusIcon size={14} />} variant="default">Create new</Button>
               <Space h="md" />
-              <Button onClick={Load} leftSection={<UploadSimpleIcon size={14} />} variant="filled" color="yellow">Load from file</Button>
+              <FileButton onChange={loadFile} accept="json">
+              { (props) => <Button {...props}  leftSection={<UploadSimpleIcon size={14} />} variant="filled" color="yellow">Load from file</Button> }
+              </FileButton>
             </Flex>
           </Center>
         </AppShell.Main>
