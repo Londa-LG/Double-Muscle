@@ -8,13 +8,20 @@ export default function Home()
 {
   const [data,setData] = useState(null);
 
-  function loadFile(file: File | null)
+  async function loadFile(file: File | null)
   {
-    setData({});
+    if(!file)
+    {
+      return
+    }
+
+    const fileData = await file.text();
+    setData(JSON.parse(fileData));
   }
 
   if(data != null)
   {
+    console.log(data.workout_plan);
     return(
       <AppShell padding="md" header={{ height: 70 }}>
         <AppShell.Header pl="md" pr="md" pt="sm">
