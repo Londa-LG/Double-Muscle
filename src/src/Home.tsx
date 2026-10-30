@@ -12,7 +12,7 @@ export default function Home()
   {
     if(!file)
     {
-      return
+      return false;
     }
 
     const fileData = await file.text();

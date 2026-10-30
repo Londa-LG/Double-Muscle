@@ -5,11 +5,11 @@
       "complete": false,
       "week_day": "Monday",
       "exercises": [
-        { "exercise": "Pike pushups", "sets": [9,9,9,9,5]},
-        { "exercise": "Rows", "sets": [9,9,9,9,5]},
-        { "exercise": "Deadlift", "sets": [9,9,9,9,5]},
-        { "exercise": "Squat", "sets": [9,9,9,9,5]},
-        { "exercise": "Upright rows", "sets": [9,9,9,9,5]}
+        { "exercise": "Pike pushups", "weight": 19, "sets": [9,9,9,9,5]},
+        { "exercise": "Rows", "weight": 19, "sets": [9,9,9,9,5]},
+        { "exercise": "Deadlift", "weight": 19, "sets": [9,9,9,9,5]},
+        { "exercise": "Squat", "weight": 19, "sets": [9,9,9,9,5]},
+        { "exercise": "Upright rows", "weight": 19, "sets": [9,9,9,9,5]}
       ]
     },
     {
@@ -17,24 +17,32 @@
       "complete": false,
       "week_day": "Thursday",
       "exercises": [
-        { "date": "2026-10-23" ,"exercise": "Pike pushups", "sets": [9,9,9,9,5]},
-        { "exercise": "Rows", "sets": [9,9,9,9,5]},
-        { "exercise": "Deadlift", "sets": [9,9,9,9,5]},
-        { "exercise": "Squat", "sets": [9,9,9,9,5]},
-        { "exercise": "Upright rows", "sets": [9,9,9,9,5]}
+        { "exercise": "Pike pushups", "weight": 19, "sets": [9,9,9,9,5]},
+        { "exercise": "Rows", "weight": 19, "sets": [9,9,9,9,5]},
+        { "exercise": "Deadlift", "weight": 19, "sets": [9,9,9,9,5]},
+        { "exercise": "Squat", "weight":19, "sets": [9,9,9,9,5]},
+        { "exercise": "Upright rows", "weight":19, "sets": [9,9,9,9,5]}
       ]
     }
   ],
   "completed_exercises":[
-    { "date": "2026-10-26" ,"exercise": "Pike pushups", "sets": [9,9,9,9,5]},
-    { "date": "2026-10-26" ,"exercise": "Rows", "sets": [9,9,9,9,5]},
-    { "date": "2026-10-26" ,"exercise": "Deadlift", "sets": [9,9,9,9,5]},
-    { "date": "2026-10-26" ,"exercise": "Squat", "sets": [9,9,9,9,5]},
-    { "date": "2026-10-26" ,"exercise": "Upright rows", "sets": [9,9,9,9,5]},
-    { "date": "2026-10-29" ,"exercise": "Pike pushups", "sets": [9,9,9,9,5]},
-    { "date": "2026-10-29" ,"exercise": "Rows", "sets": [9,9,9,9,5]},
-    { "date": "2026-10-29" ,"exercise": "Deadlift", "sets": [9,9,9,9,5]},
-    { "date": "2026-10-29" ,"exercise": "Squat", "sets": [9,9,9,9,5]},
-    { "date": "2026-10-29" ,"exercise": "Upright rows", "sets": [9,9,9,9,5]}
+    { "date": "2026-10-28" ,"exercise": "Pike pushups" , "weight":19, "sets": [9,9,9,9,5]},
+    { "date": "2026-10-01" ,"exercise": "Rows", "weight":19, "sets": [9,9,9,9,5]},
+    { "date": "2026-10-05" ,"exercise": "Deadlift", "weight":19, "sets": [9,9,9,9,5]},
+    { "date": "2026-10-08" ,"exercise": "Squat", "weight":19, "sets": [9,9,9,9,5]},
+    { "date": "2026-10-12" ,"exercise": "Upright rows", "weight":19, "sets": [9,9,9,9,5]},
+    { "date": "2026-10-14" ,"exercise": "Pike pushups", "weight":19, "sets": [9,9,9,9,5]},
+    { "date": "2026-10-19" ,"exercise": "Rows", "weight":19, "sets": [9,9,9,9,5]},
+    { "date": "2026-10-22" ,"exercise": "Deadlift", "weight":19, "sets": [9,9,9,9,5]},
+    { "date": "2026-10-26" ,"exercise": "Squat", "weight":19, "sets": [9,9,9,9,5]},
+    { "date": "2026-10-29" ,"exercise": "Upright rows", "weight":19, "sets": [9,9,9,9,5]}
+  ],
+  "concistency":[
+    { "index": 1, "trained": true, "details": "28-09-2026: Completed workout"},
+    { "index": 2, "trained": false, "details": "01-10-2026: Failed, missed workout"},
+    { "index": 3, "trained": false, "details": "05-10-2026: Felt dissy mid workout"},
+    { "index": 4, "trained": true, "details": "08-10-2026: Completed workout"},
+    { "index": 5, "trained": true, "details": "12-10-2026: Completed workout"},
+    { "index": 6, "trained": true, "details": "14-10-2026: Completed workout"}
   ]
 }

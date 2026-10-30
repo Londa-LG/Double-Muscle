@@ -6,7 +6,7 @@ import Concistency from './Concistency.tsx';
 import Progress from './Progress.tsx';
 import WorkoutCalendar from './WorkoutCalendar.tsx';
 
-function Dashboard()
+function Dashboard(props:{today:[],progress:{},records:[],days:[]})
 {
   return(
       <>
